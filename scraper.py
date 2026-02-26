@@ -23,6 +23,7 @@ def setup_database():
 # --- STEP 2: TWITCH CHAT LISTENER ---
 class ChatAnalyzerBot(commands.Bot):
     def __init__(self):
+        # NOTE: Remember to hide your oauth token before pushing to GitHub!
         super().__init__(
             token='oauth:YOUR_TOKEN_HERE', 
             prefix='!', 
@@ -66,3 +67,4 @@ if __name__ == "__main__":
     bot = ChatAnalyzerBot()
 
     bot.run()
+
